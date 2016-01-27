@@ -1,8 +1,24 @@
-<style type="text/css">
-  a.link{margin:0;padding:0;border:none;text-decoration:none;}
-</style>
-<body>
-<br>
+puts "\n"
+puts "Create a new signature placeholder in Mac Mail"
+
+puts "\n"
+puts "Name?"
+name = gets.chomp
+
+puts "\n"
+puts "Position?"
+position = gets.chomp
+
+puts "\n"
+puts "Email?"
+email = gets.chomp
+
+puts "\n\n\n\n"
+puts "---------------------------------------------------------------------------"
+puts "\n\n\n\n"
+
+html = <<EOF
+<body><br>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="format-detection" content="telephone=no">
 
@@ -21,12 +37,12 @@
 
         <tbody><tr style="margin:0;padding:0;">
           <td style="margin:0;padding:0;font-family:'Lucida Grande',sans-serif;white-space:nowrap;">
-            <strong><a href="mailto:simon@smswmedia.com " style="border:none;text-decoration:none;color:#27aae1;"><span style="color:#27aae1">Simon Wellstead</span></a></strong><span style="color:#b0b0b0;">,</span>
-            <span style="color:#b0b0b0;">Director</span>
+            <strong><a href="mailto:#{email}" style="border:none;text-decoration:none;color:#27aae1;"><span style="color:#27aae1">#{name}</span></a></strong><span style="color:e0e0e0;">,</span>
+            <span style="color:#b0b0b0;">#{position}</span>
           </td>
         </tr>
         
-        <tr style="margin:0;padding:0;color:#b0b0b0;">
+        <tr style="margin:0;padding:0;color:#b0a49b;">
           <td style="margin:0;padding:0;padding-top:8px;font-family:'Lucida Grande',sans-serif;white-space:nowrap;">
             <span style="color:#b0b0b0">+44(0)1252 715 059</span>
             <span style="color:#27AAE2; margin: 0 10px">•</span>
@@ -34,7 +50,7 @@
           </td>
         </tr>               
 
-        <tr style="margin:0;padding:0;color:#b0b0b0;">
+        <tr style="margin:0;padding:0;color:#b0a49b;">
           <td style="margin:0;padding:0;padding-top:8px;font-family:'Lucida Grande',sans-serif;white-space:nowrap;">
             <span style="color:#b0b0b0; font-size:10px;line-height:16px">
               SMSW Media Ltd, Acorn House, 21b East Street, Farnham, Surrey, GU9 7SD. UK<br>
@@ -48,3 +64,21 @@
 </tbody></table>
 <br>
 </body>
+EOF
+
+puts html
+
+puts "\n\n\n\n"
+puts "---------------------------------------------------------------------------"
+puts "\n\n\n\n"
+
+puts "\n"
+puts "iCloud..."
+puts "\t ~/Library/Mobile Documents/com~apple~mail/Data/MailData/Signatures/"
+puts "\n"
+puts "Not iCloud..."
+puts "\t ~/Library/Mail/V2/MailData/Signatures/"
+puts "\n"
+puts "\tOpen xxxxx-etc-xxxxx.mailsignature - code goes after Mime-Version"
+puts "\tIMPORTANT!!! CMD + i the file and lock it or run chflags uchg /path/to/file"
+puts "\tRestart Mail"
