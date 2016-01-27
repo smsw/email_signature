@@ -53,7 +53,7 @@ html = <<EOF
         <tr style="margin:0;padding:0;color:#b0a49b;">
           <td style="margin:0;padding:0;padding-top:8px;font-family:'Lucida Grande',sans-serif;white-space:nowrap;">
             <span style="color:#b0b0b0; font-size:10px;line-height:16px">
-              SMSW Media Ltd, Acorn House, 21b East Street, Farnham, Surrey, GU9 7SD. UK<br>
+              SMSW Media Ltd, 21b East Street, Farnham, Surrey, GU9 7SD. UK<br>
               Registered Address: 10 St Georges Yard, Farnham, Surrey, GU9 7LW
             </span>
           </td>
