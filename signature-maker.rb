@@ -13,6 +13,10 @@ puts "\n"
 puts "Email?"
 email = gets.chomp
 
+puts "\n"
+puts "Mobile?"
+mobile = gets.chomp
+
 puts "\n\n\n\n"
 puts "---------------------------------------------------------------------------"
 puts "\n\n\n\n"
@@ -45,6 +49,8 @@ html = <<EOF
         <tr style="margin:0;padding:0;color:#b0a49b;">
           <td style="margin:0;padding:0;padding-top:8px;font-family:'Lucida Grande',sans-serif;white-space:nowrap;">
             <span style="color:#b0b0b0">+44(0)1252 715 059</span>
+            <span style="color:#27AAE2; margin: 0 10px">•</span>
+            <span style="color:#b0b0b0">#{mobile}</span>
             <span style="color:#27AAE2; margin: 0 10px">•</span>
             <a href="http://smswmedia.com" style="border:none;text-decoration:none;color:#b0b0b0;">www.smswmedia.com</a><br>
           </td>
